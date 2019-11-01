@@ -19,4 +19,4 @@ test(`display Women's World Cup`, () => {
 test('button is clickable', () =>{
   const { getByTestId } = render(<App />);
   fireEvent.click(getByTestId('toggleDarkMode'), {button: 0});
-})
+});
