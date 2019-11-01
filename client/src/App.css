@@ -12,3 +12,9 @@
   background-color: #282c34;
   color: white;
 }
+
+.card {
+  margin: 20px auto;
+  border: 2px solid slateblue;
+  width: 80%;
+}
