@@ -2,10 +2,6 @@ import React from 'react';
 import Card from './Card';
 
 class Display extends React.Component {
-    constructor() {
-        super();
-    }
-    
     render() {
         
         return (
