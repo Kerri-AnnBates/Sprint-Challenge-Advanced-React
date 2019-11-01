@@ -1,39 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import axios from 'axios';
-import Display from './component/Display';
-import Header from './component/Header';
+import CardList from './component/CardList';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: []
-    }
-  }
+function App() {
+  const [data, setData] = useState([]);
+  const [darkMode, setdarkMode] = useState('')
 
-  componentDidMount() {
-    axios.get('http://localhost:5000/api/players')
-    .then(res => {
-      console.log(res);
-      // Set data.
-      this.setState({
-        data: res.data
-      })
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }
+  function setDarkMode() {
 
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Display data={this.state.data} />
-      </div>
-    )
   }
+  return (
+    <div className="App">
+      <CardList />
+    </div>
+  )
 }
 
 export default App;
