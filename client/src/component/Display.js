@@ -1,14 +1,18 @@
 import React from 'react';
+import Card from './Card';
 
 class Display extends React.Component {
     constructor() {
         super();
     }
-
+    
     render() {
+        
         return (
             <div>
-                <h2>from display.js</h2>
+                {this.props.data.map((player) => (
+                    <Card player={player} key={player.id} />
+                ))}
             </div>
         )
     }
