@@ -30,6 +30,7 @@ export default class CardList extends Component {
         return (
             <div className="card-list">
                 <Header />
+                <button onClick={this.props.toggleDarkMode}>Dark mode</button>
                 <Display data={this.state.data} />
             </div>
         )

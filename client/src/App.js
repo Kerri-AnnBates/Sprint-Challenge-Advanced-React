@@ -1,17 +1,18 @@
 import React, {useState} from 'react';
 import './App.css';
 import CardList from './component/CardList';
+import { useDarkMode } from './hooks/useDarkMode';
 
-function App() {
-  const [data, setData] = useState([]);
-  const [darkMode, setdarkMode] = useState('')
+const App = () => {
+  const [darkMode, setdarkMode] = useDarkMode(false);
 
-  function setDarkMode() {
 
+  const toggleDarkMode = () => {
+    setdarkMode(!darkMode);
   }
   return (
     <div className="App">
-      <CardList />
+      <CardList toggleDarkMode={toggleDarkMode} />
     </div>
   )
 }
